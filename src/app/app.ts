@@ -1,13 +1,23 @@
-import { Component, signal } from '@angular/core';
-import { ProductosComponent } from './components/productos/productos';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProductosComponent],
+  imports: [CommonModule, RouterModule],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('GameStore');
+export class AppComponent {
+  title = 'GameStore';
+  vistaActual: 'productos' | 'carrito' = 'productos';
+
+  mostrarProductos() {
+    this.vistaActual = 'productos';
+  }
+
+  mostrarCarrito() {
+    this.vistaActual = 'carrito';
+  }
 }
