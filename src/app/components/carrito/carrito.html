@@ -1,1 +1,29 @@
-<p>carrito works!</p>
+<div class="carrito-container">
+  <h2>🛒 Tu Carrito</h2>
+
+  <div *ngIf="carrito.length === 0" class="vacio">
+    <p>Tu carrito está vacío.</p>
+  </div>
+
+  <div *ngIf="carrito.length > 0">
+    <div class="carrito-item" *ngFor="let producto of carrito">
+      <img [src]="producto.imagen" [alt]="producto.nombre" class="carrito-imagen">
+      <div class="carrito-info">
+        <h3>{{ producto.nombre }}</h3>
+        <p>Precio: ${{ producto.precio }}</p>
+        <p>Cantidad: {{ producto.cantidad }}</p>
+        <p>Subtotal: ${{ (producto.precio * producto.cantidad).toFixed(2) }}</p>
+      </div>
+    </div>
+
+    <div class="total">
+      <h3>Total: ${{ total.toFixed(2) }}</h3>
+      <button class="btn-limpiar" (click)="limpiarCarrito()">Vaciar Carrito</button>
+      <button class="btn-compra" (click)="realizarCompra()">🛍️ Realizar Compra</button>
+    </div>
+  </div>
+
+  <div class="toast" *ngIf="mensajeVisible">
+    {{ mensaje }}
+  </div>
+</div>
