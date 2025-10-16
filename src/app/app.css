@@ -58,6 +58,7 @@
     padding: 1rem;
     box-sizing: inherit;
     position: relative;
+    background: linear-gradient(135deg, #d7cae2 0%, #2d4d83 100%);
   }
 
   .angular-logo {
@@ -253,4 +254,7 @@ main {
   color: var(--gray-700);
   font-size: 1.1rem;
 }
-  }
+
+
+
+  
