@@ -10,26 +10,24 @@
 
 
 
+
+
 <main>
   <div class="content">
     <div class="intro">
-      <h1>🎮 Bienvenido a {{ title() }}</h1>
+      <h1>🎮 Bienvenido a GameStore</h1>
       <p>Explora nuestros juegos destacados y arma tu colección.</p>
     </div>
 
-    <!-- 🔹 Menú debajo del título -->
-    <nav class="pill-group">
-      <a class="pill active" href="#">Inicio</a>
-      <a class="pill" href="#">Productos</a>
-      <a class="pill" href="#">Carrito</a>
-      <a class="pill" href="#">Contacto</a>
+    <!-- 🧭 Menú de navegación -->
+    <nav class="pill-group" role="navigation" aria-label="menu principal">
+      <a routerLink="/productos" routerLinkActive="active" class="pill">Productos</a>
+      <a routerLink="/carrito" routerLinkActive="active" class="pill">Carrito</a>
     </nav>
   </div>
 
-  <section class="productos-section">
-    <h2 class="productos-title">Nuestros Productos</h2>
-    <app-productos></app-productos>
-  </section>
+  <!-- Aquí Angular mostrará el componente de la ruta -->
+  <router-outlet></router-outlet>
 
   <footer class="footer">
     <p>© 2025 GameStore — Todos los derechos reservados.</p>
