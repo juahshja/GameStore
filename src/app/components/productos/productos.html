@@ -1,23 +1,18 @@
 <div class="productos-container">
-  <h2>🎮 Catálogo de Juegos</h2>
+  <h2>Catálogo de Juegos</h2>
 
   <div class="productos-grid">
     <div class="producto-card" *ngFor="let producto of productos">
-      <img
-        [src]="producto.imagen"
-        [alt]="producto.nombre"
-        class="producto-imagen"
-      />
-
-      <div class="producto-info">
-        <h3>{{ producto.nombre }}</h3>
-        <p class="descripcion">{{ producto.descripcion }}</p>
-        <p class="precio">S/ {{ producto.precio | number: '1.2-2' }}</p>
-
-        <button class="btn-agregar" (click)="agregarAlCarrito(producto)">
-          Agregar al Carrito
-        </button>
-      </div>
+      <img [src]="producto.imagen" [alt]="producto.nombre" class="producto-imagen">
+      <h3>{{ producto.nombre }}</h3>
+      <p class="descripcion">{{ producto.descripcion }}</p>
+      <p class="precio">${{ producto.precio }}</p>
+      <button class="btn-agregar" (click)="agregarAlCarrito(producto)">Agregar al Carrito</button>
     </div>
+  </div>
+
+  <!-- NOTIFICACIÓN -->
+  <div class="toast" *ngIf="mensajeVisible">
+    {{ mensaje }}
   </div>
 </div>
