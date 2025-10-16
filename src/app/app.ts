@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ProductosComponent } from './components/productos/productos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductosComponent],
+  standalone: true,
+  imports: [ProductosComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('GameStore');
