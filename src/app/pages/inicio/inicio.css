@@ -1,0 +1,54 @@
+/* Variables de Color */
+:root {
+    --purple-main: #9333ea;     /* Morado para botones tenues */
+    --pink-accent: #e91e63;     /* Rosa/Magenta para botón 'Inicio' y título */
+    --gradient-bg: linear-gradient(135deg, #a7a7d3 0%, #6f5898 100%); 
+}
+
+/* Aplicación del fondo */
+body {
+    background: var(--gradient-bg);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el título "Catálogo de Juegos": color magenta */
+.titulo-catalogo {
+    color: var(--pink-accent); 
+}
+
+/* Arreglar el contenedor del héroe para centrar el contenido */
+.hero-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.hero-content {
+    text-align: center;
+}
+
+/* --- ESTILOS DE BOTONES (PILLS) --- */
+.pill-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.pill {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    background-color: var(--purple-main); /* Morado tenue */
+    opacity: 0.7; 
+}
+.pill-inicio {
+    background-color: var(--pink-accent); /* Rosa fuerte */
+    opacity: 1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,94 @@
+/* Estilos generales */
+.contacto-main {
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.header-contacto {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header-contacto h1 {
+    font-size: 2.5rem;
+    color: #333; /* Color oscuro */
+}
+
+/* Contenedor principal del contenido */
+.contacto-contenido {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de información y formulario */
+.info-contacto-card, .mensaje-form-card {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-contacto-card {
+    flex: 1; /* Ocupa el espacio restante */
+    min-width: 300px;
+}
+.mensaje-form-card {
+    flex: 2; /* Ocupa más espacio para el formulario */
+    min-width: 400px;
+}
+
+/* Estilos de los ítems de contacto */
+.info-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.info-item:last-child {
+    border-bottom: none;
+}
+.info-item h3 {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+.info-item p {
+    color: #9333ea; /* Color morado de tu marca */
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding en el width */
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-enviar {
+    background-color: #e91e63; /* Color magenta */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}

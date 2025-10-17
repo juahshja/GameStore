@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+/* ========================================================= */
+/* ESTILOS GLOBALES: Aplicados a TODO el cuerpo del documento */
+/* ========================================================= */
+
+/* Variables de Color (Necesarias para toda la app) */
+:root {
+    --purple-main: #9333ea;     /* Morado */
+    --pink-accent: #e91e63;     /* Rosa/Magenta */
+    --blue-accent: #00d4ff;     /* Azul claro para títulos de tarjetas */
+    --gradient-bg: linear-gradient(135deg, #a7a7d3 0%, #6f5898 100%); 
+}
+
+/* Aplicación del fondo a la etiqueta BODY */
+body {
+    background: var(--gradient-bg);
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333; 
+}

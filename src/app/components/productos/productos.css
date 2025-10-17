@@ -1,141 +1,82 @@
-/* ===== CONTENEDOR PRINCIPAL ===== */
-.productos-container {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.productos-container h2 {
-  color: #00d4ff;
-  font-size: 2.3rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
-}
-
-/* ===== GRID ===== */
+/* Estilo de la Cuadrícula de Productos */
 .productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
-/* ===== TARJETA ===== */
+/* Estilo de la Tarjeta de Producto */
 .producto-card {
-  background-color: #1f1f1f;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: white;
-  width: 100%;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+    width: 250px; 
+    background-color: #1a1a1a; /* Fondo muy oscuro */
+    color: white; 
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
 }
 
-.producto-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(0, 212, 255, 0.4);
-}
-
-/* ===== IMAGEN ===== */
 .producto-imagen {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  background-color: #000;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* ===== INFORMACIÓN ===== */
-.producto-info {
-  margin-top: 1rem;
-  text-align: left;
+.card-body {
+    padding: 10px 15px;
+    flex-grow: 1; 
 }
 
-.producto-info h3 {
-  color: #00d4ff;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.card-body h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--blue-accent); /* Título en azul vibrante (variable global) */
+}
+.card-body .descripcion {
+    font-size: 0.9rem;
+    color: #ccc;
 }
 
-.descripcion {
-  color: #bbb;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+/* Estilos de Precios y Footer */
+.card-footer {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9); /* Pie oscuro sólido */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.precio {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 1rem;
+/* Precio antiguo tachado */
+.precio-viejo {
+    color: #aaaaaa; 
+    text-decoration: line-through; 
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
 
-/* ===== BOTONES ===== */
+/* Precio actual resaltado */
+.precio-actual {
+    color: #4CAF50; /* Verde vibrante */
+    font-weight: 900; 
+    font-size: 1.4em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Botón "Agregar al Carrito" (Estilo degradado) */
 .btn-agregar {
-  width: 100%;
-  padding: 0.8rem;
-  background: linear-gradient(90deg, #00d4ff, #ff007f);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: opacity 0.3s, transform 0.2s;
-}
-
-.btn-agregar:hover {
-  opacity: 0.9;
-}
-
-.btn-agregar:active {
-  transform: scale(0.96);
-}
-
-.btn-compra {
-  margin-top: 30px;
-  padding: 12px 25px;
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.btn-compra:hover {
-  background-color: #43A047;
-}
-
-/* ===== TOAST / NOTIFICACIÓN ===== */
-.toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #00d4ff;
-  color: #1a1a1a;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  animation: fadeInOut 2.5s ease forwards;
-  z-index: 1000;
-}
-
-/* ===== ANIMACIONES ===== */
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(20px); }
-  10%, 90% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(20px); }
-}
-
-.acciones {
-  text-align: center;
-  margin-top: 30px;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--blue-accent) 0%, var(--pink-accent) 100%); 
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }

@@ -1,0 +1,29 @@
+<main>
+    <div class="hero-inicio">
+        
+        <div class="hero-content">
+            <div style="font-size: 5rem; margin-bottom: 1rem;">🎮</div>
+            <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem; color: #333;">Bienvenido a GameStore</h1>
+            <p style="font-size: 1.2rem; color: #555; margin-bottom: 2rem;">Explora nuestros juegos destacados y arma tu colección.</p>
+
+            <div class="pill-group">
+                <a class="pill pill-inicio" routerLink="/inicio" routerLinkActive="active">Inicio</a>
+                <a class="pill" routerLink="/productos" routerLinkActive="active">Productos</a>
+                <a class="pill" routerLink="/carrito" routerLinkActive="active">Carrito</a>
+                <a class="pill" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="productos-section">
+        <h2 style="text-align: center; font-size: 2rem; font-weight: 900; color: #333; margin-bottom: 2rem;">Nuestros Productos</h2>
+        
+        <h2 class="titulo-catalogo" style="text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 3rem;">🎮 Catálogo de Juegos</h2>
+        
+        <app-productos></app-productos>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 GameStore. Todos los derechos reservados.</p>
+</footer>
